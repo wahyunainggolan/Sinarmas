@@ -17,7 +17,6 @@ func NewUserRepository(db *sql.DB) UserRepositoryInterface {
 	return &UserRepository{Db: db}
 }
 
-// RequestOtp implements MangaRepositoryInterface
 func (m *UserRepository) RequestOtp(post model.RequestUser) model.ResponseUser {
 	query, err := m.Db.Query("SELECT * FROM users WHERE user_id = $1", post.UserId)
 	if err != nil {
