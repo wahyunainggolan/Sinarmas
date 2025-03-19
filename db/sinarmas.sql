@@ -1,0 +1,6 @@
+CREATE TABLE users (
+ id BIGSERIAL NOT NULL PRIMARY KEY,
+ user_id VARCHAR(255) NOT NULL,
+ otp CHAR(5) NULL,
+ start_date_otp TIMESTAMP  NULL
+)
